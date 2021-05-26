@@ -6,7 +6,7 @@ The current goal is to build a Machine Learning Android App to automatically rec
 Subject|Date
 ------------ | -------------
 Approval|June 1st
-*First-Assgnment|June 8, 11:59 pm Tu
+*First-Assgnment*|June 8, 11:59 pm Tu
 Proposal|June 7th
 Interim |June 15th
 Final PPT |June 24th
