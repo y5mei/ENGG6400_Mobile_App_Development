@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DispalySchool">
+
+
+    <TextView
+        android:id="@+id/textViewSchool"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#2FFFFFFF"
+        android:fontFamily="@font/old_standard_tt_bold"
+        android:gravity="center"
+        android:text="School in Aisa"
+        android:textColor="#000"
+        android:textColorHighlight="#00BCD4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:clickable="true"
+        android:id="@+id/image_wiki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="444dp"
+        android:onClick="openWiki"
+        app:layout_constraintBottom_toTopOf="@+id/image_school"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSchool">
+
+        <ImageView
+            android:id="@+id/imagewiki"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/wikipedia" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/imagewiki"
+            android:fontFamily="@font/old_standard_tt_bold"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="Find it on Wikipedia"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:clickable="true"
+        android:id="@+id/image_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="36dp"
+        android:onClick="openHomePage"
+        app:layout_constraintBottom_toTopOf="@+id/image_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageschool"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/homepage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/imageschool"
+            android:fontFamily="@font/old_standard_tt_bold"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="Go to School's HomePage"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:clickable="true"
+        android:id="@+id/image_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="openMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_school">
+
+        <ImageView
+            android:id="@+id/imagemap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/googlemap" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/imagemap"
+            android:fontFamily="@font/old_standard_tt_bold"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:text="Find it on Google Map"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="396dp"-->
+<!--        android:layout_height="299dp"-->
+<!--        android:clickable="true"-->
+<!--        android:onClick="openWiki"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/image_map"-->
+<!--        app:srcCompat="@drawable/newwelcome" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

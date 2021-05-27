@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntentsAndMultiplyActivities">
-        <activity android:name=".CountrySearch"></activity>
+        <activity android:name=".DispalySchool"></activity>
+        <activity android:name=".SelectCountry" />
+        <activity android:name=".SelectContinent" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

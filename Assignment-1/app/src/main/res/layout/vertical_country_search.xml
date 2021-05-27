@@ -1,0 +1,121 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <!-- everything you already have -->
+        <TextView
+            android:id="@+id/textViewChooseCountry"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:gravity="center"
+            android:fontFamily="@font/old_standard_tt_bold"
+            android:text="Choose a Continent"
+            android:textSize="50dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/idGVcourses"
+            app:layout_constraintVertical_bias="0.0" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/countryPicture"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageButton
+                android:id="@+id/imageButtonAsia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="#80858585"
+                android:onClick="selectAisaCountinent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/asia" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view2"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="selectAmericaCountinent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageButton
+                android:id="@+id/imageButtonAmerica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="#80858585"
+                android:onClick="selectAmericaCountinent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/america" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view3"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="selectAustriliaCountinent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageButton
+                android:id="@+id/imageButtonAustrilia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="#80858585"
+                android:onClick="selectAustriliaCountinent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/australia" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view4"
+            android:layout_width="100dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="selectEuropeCountinent"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageButton
+                android:id="@+id/imageButtonEurpoe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="#80858585"
+                android:onClick="selectEuropeCountinent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/europe" />
+        </androidx.cardview.widget.CardView>
+    </TableLayout>
+</ScrollView>

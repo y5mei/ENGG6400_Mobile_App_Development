@@ -26,8 +26,8 @@ Button search_button;
         this.finish();
         System.exit(0);
     }
-    public void chooseCountry(View view){
-        Intent newintent = new Intent(this, CountrySearch.class);
+    public void chooseContinents(View view){
+        Intent newintent = new Intent(this, SelectContinent.class);
         startActivity(newintent);
     }
 }
