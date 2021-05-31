@@ -70,4 +70,21 @@ countrySpiner = findViewById(R.id.dynamic_spinner);
         })
   ```
   
+  ## Add upward navigation
+ "Each screen in your app that's not the main entry point, which are all the screens that aren't the home screen, must provide navigation that directs the user to the logical parent screen in the app's hierarchy. To do this, add an Up button in the app bar.
+
+To add an Up button, you need to declare which activity is the logical parent in the AndroidManifest.xml file. Open the file at app > manifests > AndroidManifest.xml, locate the <activity> tag for DisplayMessageActivity, and replace it with the following:"
+  https://developer.android.com/training/basics/firstapp/starting-activity
+  
+  ```xml
+  <activity android:name=".DisplayMessageActivity"
+          android:parentActivityName=".MainActivity">
+    <!-- The meta-data tag is required if you support API level 15 and lower -->
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value=".MainActivity" />
+</activity>
+  ```
+  
+  
   
