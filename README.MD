@@ -11,11 +11,15 @@ Proposal|June 7th
 Interim |June 15th
 Final PPT |June 24th
 
-## What Learned from Assignment-1
+## What I have Learned from Assignment-1
 ### How to make a picture full fill a layout:
 ```xml
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:scaleType="centerCrop"
 ```
+### How to Listen to a Spinner:
 
+```xml
+I need to add some code here
+```
