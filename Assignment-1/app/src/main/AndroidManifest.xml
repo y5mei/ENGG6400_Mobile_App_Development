@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntentsAndMultiplyActivities">
-        <activity android:name=".DispalySchool"></activity>
-        <activity android:name=".SelectCountry" />
-        <activity android:name=".SelectContinent" />
+        <activity android:name=".DispalySchool"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".SelectCountry"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SelectContinent"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
