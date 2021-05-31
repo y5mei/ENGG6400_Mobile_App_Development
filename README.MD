@@ -19,7 +19,55 @@ android:layout_height="match_parent"
 android:scaleType="centerCrop"
 ```
 ### How to Listen to a Spinner:
+There are 3 steps to listen to a spinner:
 
+0) You need to get access to the spinner inside of your onCreate method:
 ```xml
-I need to add some code here
+countrySpiner = findViewById(R.id.dynamic_spinner);
 ```
+
+1) You need to parepare a list of content, List<T>, for the spinner to display:
+  
+```xml
+        List<CountryList.Country> counterList = new ArrayList<>();
+        CountryList myCountryList = new CountryList();
+
+        switch (id){
+            case 1:{
+                myImageView.setImageResource(R.drawable.asia);
+                myCountryList.prepareAisaCountryList();
+                break;}
+            case 2:{
+                myImageView.setImageResource(R.drawable.america);
+                myCountryList.prepareAmericaCountryList();
+                break;}
+        }
+        counterList = myCountryList.countryList;
+```
+ 
+2) You need to construct a adapter, ArrayAdapter<T>, from your List<T>, then use setAdapter method to assign this adapter to your spinner object:
+  
+  ```xml
+   ArrayAdapter<CountryList.Country> adapter = new ArrayAdapter<CountryList.Country>(this,R.layout.support_simple_spinner_dropdown_item,counterList);
+   countrySpiner.setAdapter(adapter);
+  ```
+  
+ 3) Setup a listener to get which item is selected:
+  
+  ```xml
+  countrySpiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // get the selected item, and cast it to "Country" 
+                CountryList.Country country = (CountryList.Country) parent.getSelectedItem();
+                someFunctionYouNeedtoDo(country)
+            }
+
+            @Override // Do something if nothing is selected
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        })
+  ```
+  
+  
