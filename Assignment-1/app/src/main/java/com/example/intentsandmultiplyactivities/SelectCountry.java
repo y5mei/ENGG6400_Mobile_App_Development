@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,6 +25,7 @@ public class SelectCountry extends AppCompatActivity {
     ImageButton myImageView;
     Integer id;
     GlobalField globalField;
+    Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,8 @@ public class SelectCountry extends AppCompatActivity {
             id = 1;
         }else{
             // recall the saved continenet information
-            id = intent.getIntExtra("num",selectedContinenet);
+            id = selectedContinenet;
+//            id = intent.getIntExtra("num",selectedContinenet);
         }
 
         header = findViewById(R.id.textViewChooseCountry);
@@ -88,7 +91,7 @@ public class SelectCountry extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 CountryList.Country country = (CountryList.Country) parent.getSelectedItem();
-                displayCountryData(country);
+                displayCountryData(country, adapter);
             }
 
             @Override
@@ -103,16 +106,17 @@ public class SelectCountry extends AppCompatActivity {
 //        displayCountryData(country);
 //    }
     // 4) show a toast message if anything is selected
-    private void displayCountryData(CountryList.Country country){
+    private void displayCountryData(CountryList.Country country, ArrayAdapter<CountryList.Country>adapter){
         String countryName = country.getName();
         String schollName = country.getSchool().getName();
         String URL = country.getSchool().getUrl();
         String GPS = country.getSchool().getGPS();
         String wiki = country.getSchool().getWiki();
+        toast = new Toast(this);
 
 
         if (schollName == "Please Select a Country"){
-            Toast.makeText(this, schollName,Toast.LENGTH_SHORT).show();
+//            toast.makeText(this, schollName,Toast.LENGTH_SHORT).show();
         }else{
             Intent schoolSelectedIntent = new Intent(this, DispalySchool.class);
             schoolSelectedIntent.putExtra("country",countryName);
@@ -121,11 +125,11 @@ public class SelectCountry extends AppCompatActivity {
             schoolSelectedIntent.putExtra("GPS",GPS);
             schoolSelectedIntent.putExtra("WIKI",wiki);
             schoolSelectedIntent.putExtra("continentID",id);
+            // Clear Adapter and toast message
+            countrySpiner.setAdapter(adapter);
             startActivity(schoolSelectedIntent);
         }
 
-
-//        Toast.makeText(this, schollName+"\n"+URL,Toast.LENGTH_LONG).show();
 
     }
 }

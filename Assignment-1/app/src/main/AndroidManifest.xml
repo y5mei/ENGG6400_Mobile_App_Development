@@ -12,12 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IntentsAndMultiplyActivities">
         <activity android:name=".DispalySchool"
+            android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".SelectCountry"></activity>
         <activity android:name=".SelectCountry"
+            android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".SelectContinent"/>
         <activity android:name=".SelectContinent"
+            android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
+            android:configChanges="orientation|keyboardHidden"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

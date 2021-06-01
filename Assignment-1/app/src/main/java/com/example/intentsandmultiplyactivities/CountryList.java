@@ -91,7 +91,7 @@ public class CountryList {
         School THU = new School("Tsinghua University","https://www.tsinghua.edu.cn/en/","geo:39.99983175532476, 116.32651899923793","https://en.wikipedia.org/wiki/Tsinghua_University");
         School TKU = new School("The University of Tokyo","https://www.u-tokyo.ac.jp/en/","geo:35.712616500890675, 139.76198899744338","https://en.wikipedia.org/wiki/University_of_Tokyo");
         School IIT = new School("Indian Institutes of Technology","https://www.iitm.ac.in/","geo:12.993106745705406, 80.23438356920953","https://en.wikipedia.org/wiki/Indian_Institutes_of_Technology");
-        School NUS = new School("National University of Singapore","https://www.zju.edu.cn/english/","1.296599694706494, 103.77654410072641","https://en.wikipedia.org/wiki/National_University_of_Singapore");
+        School NUS = new School("National University of Singapore","https://www.zju.edu.cn/english/","geo:1.296599694706494, 103.77654410072641","https://en.wikipedia.org/wiki/National_University_of_Singapore");
 
 
 

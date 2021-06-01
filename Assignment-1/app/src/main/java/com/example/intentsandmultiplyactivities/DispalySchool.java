@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DispalySchool extends AppCompatActivity {
     TextView header;
@@ -27,6 +28,9 @@ public class DispalySchool extends AppCompatActivity {
         url = intent.getStringExtra("URL");
         gps = intent.getStringExtra("GPS");
         wiki = intent.getStringExtra("WIKI");
+
+       // display the welcome toast message
+//        Toast.makeText(this, "Welcome to "+schoolname,Toast.LENGTH_SHORT).show();
 
         // save the continent information
         globalField = (GlobalField) this.getApplication();
