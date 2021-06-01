@@ -3,6 +3,8 @@
     package="com.example.intentsandmultiplyactivities">
 
     <application
+
+        android:name=".GlobalField"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IntentsAndMultiplyActivities">
         <activity android:name=".DispalySchool"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".SelectCountry"></activity>
         <activity android:name=".SelectCountry"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".SelectContinent"/>
         <activity android:name=".SelectContinent"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">

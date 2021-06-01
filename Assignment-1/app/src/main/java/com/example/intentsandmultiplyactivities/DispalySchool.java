@@ -13,6 +13,7 @@ public class DispalySchool extends AppCompatActivity {
     String url;
     String gps;
     String wiki;
+    GlobalField globalField;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,10 @@ public class DispalySchool extends AppCompatActivity {
         url = intent.getStringExtra("URL");
         gps = intent.getStringExtra("GPS");
         wiki = intent.getStringExtra("WIKI");
+
+        // save the continent information
+        globalField = (GlobalField) this.getApplication();
+        globalField.setContinentSelection(intent.getIntExtra("continentID",0));
     }
     public void openWiki(View view){
         Uri webpage = Uri.parse(wiki);

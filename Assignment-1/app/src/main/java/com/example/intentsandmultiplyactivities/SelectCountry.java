@@ -23,44 +23,58 @@ public class SelectCountry extends AppCompatActivity {
     TextView header;
     ImageButton myImageView;
     Integer id;
+    GlobalField globalField;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_country_selected);
         Intent intent = getIntent();
+        // check which continent was selected before, if this value is 0, which means we are
 
+        globalField = (GlobalField) this.getApplication();
+        int selectedContinenet = globalField.getContinentSelection();
 
-        // 0) prepare the Header
-        continentName = intent.getStringExtra("Continent");
-        id = intent.getIntExtra("num",100);
+        // 0) prepare the Header and prepare the spiner content list
+        if (selectedContinenet==0){
+            // something wrong, let's go back to the default page
+            id = 1;
+        }else{
+            // recall the saved continenet information
+            id = intent.getIntExtra("num",selectedContinenet);
+        }
+
         header = findViewById(R.id.textViewChooseCountry);
         myImageView = findViewById(R.id.imageButtonAsia);
-        header.setText("Choose a Country in "+continentName);
-
-
         countrySpiner = findViewById(R.id.dynamic_spinner);
-
-        // 1) prepare the spiner content list
         List<CountryList.Country> counterList = new ArrayList<>();
         CountryList myCountryList = new CountryList();
 
         switch (id){
             case 1:{
+                continentName = "Aisa";
                 myImageView.setImageResource(R.drawable.asia);
                 myCountryList.prepareAisaCountryList();
                 break;}
             case 2:{
+                continentName = "America";
                 myImageView.setImageResource(R.drawable.america);
                 myCountryList.prepareAmericaCountryList();
                 break;}
             case 3: {
+                continentName = "Australia";
                 myImageView.setImageResource(R.drawable.australia);
+                myCountryList.prepareAustriliaCountryList();
                 break;}
             case 4: {
+                continentName = "Europe";
                 myImageView.setImageResource(R.drawable.europe);
+                myCountryList.prepareEurpoeCountryList();
                 break;}
         }
         counterList = myCountryList.countryList;
+
+        header.setText("Choose a Country in "+continentName);
 
 
 
@@ -106,6 +120,7 @@ public class SelectCountry extends AppCompatActivity {
             schoolSelectedIntent.putExtra("URL",URL);
             schoolSelectedIntent.putExtra("GPS",GPS);
             schoolSelectedIntent.putExtra("WIKI",wiki);
+            schoolSelectedIntent.putExtra("continentID",id);
             startActivity(schoolSelectedIntent);
         }
 
