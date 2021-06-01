@@ -35,6 +35,7 @@
             android:background="@android:drawable/btn_dropdown"
             android:spinnerMode="dropdown"/>
             >
+
         <androidx.cardview.widget.CardView
             android:id="@+id/countryPicture"
             android:layout_width="100dp"
@@ -52,7 +53,9 @@
                 android:layout_height="match_parent"
                 android:layout_row="0"
                 android:layout_column="0"
-                android:background="#80858585"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:onClick="showToastMessage"
                 android:scaleType="fitCenter"
                 android:src="@drawable/asia" />
         </androidx.cardview.widget.CardView>
