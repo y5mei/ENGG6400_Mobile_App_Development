@@ -85,6 +85,16 @@ To add an Up button, you need to declare which activity is the logical parent in
         android:value=".MainActivity" />
 </activity>
   ```
+## Add a Scrollview
   
+  In order to have a scrollview, we need to put a TableLayout inside of a SCROLLVIEW:
+  
+  ```xml
+      <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+     </TableLayout>
+  ```
   
   
