@@ -132,4 +132,8 @@ public class SelectCountry extends AppCompatActivity {
 
 
     }
+
+    public void showToastMessage(View view){
+        toast.makeText(this, "Please Select a Country with the Spinner Above!",Toast.LENGTH_SHORT).show();
+    }
 }
