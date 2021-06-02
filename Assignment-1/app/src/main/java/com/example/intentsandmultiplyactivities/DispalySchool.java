@@ -30,7 +30,7 @@ public class DispalySchool extends AppCompatActivity {
         wiki = intent.getStringExtra("WIKI");
 
        // display the welcome toast message
-//        Toast.makeText(this, "Welcome to "+schoolname,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Welcome to "+schoolname,Toast.LENGTH_SHORT).show();
 
         // save the continent information
         globalField = (GlobalField) this.getApplication();
