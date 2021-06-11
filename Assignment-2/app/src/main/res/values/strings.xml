@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">HW2Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="eng"><u>English</u></string>
+    <string name="chinese"><u>Chinese</u></string>
+    <string name="spanish"><u>Spanish</u></string>
+    <string name="phy">Physics</string>
+    <string name="chm">Chemistry</string>
+    <string name="pea">Peace</string>
+    <string name="lit">Literature</string>
+    <string name="setlang">Set_Language</string>
+    <string name="rogerphysics">Roger Penrose \n A black hole is a supermassive compact object with a gravitational force so large that nothing, not even light, can escape from it. In 1964, Roger Penrose proposed critical mathematical tools to describe black holes. He showed that Einstein’s general theory of relativity means the formation of black holes must be seen as a natural process in the development of the universe. He was also able to describe black holes in detail: at their farthest depths is a singularity where all known laws of nature dissolve.</string>
+    <string name="Jenniferchem">Jennifer Doudna \n The life processes of organisms are controlled by genes made up of sections of DNA. Jennifer Doudna and Emmanuelle Charpentier developed a methodology for high precision changes to genes. They used the immune defenses of bacteria, which disable viruses by cutting their DNA up with a type of genetic scissors. They were able to make a tool that could be used to cut any DNA molecule at a predetermined site. The CRISPR/Cas9 gene scissors can lead to new scientific discoveries in the fight against cancer and genetic diseases.</string>
+    <string name="wfp">World Food Programme \n The World Food Programme was awarded the Nobel Peace Prize for its efforts to combat hunger, promote peace in conflict-affected areas, and prevent the use of hunger as a weapon of war and conflict.</string>
+    <string name="louise">Louise Glück\n  Personal experiences have always been an important touchstone for Louise Glück’s poetry. Childhood, family life, relationships and death are recurring themes in her collections. Glück seeks out the universal. Myths and classical motifs are found in most of her work. In addition to classical mythology, the rich English-language poetry tradition is her primary literary source of inspiration. Glück’s language is characterised by clarity and precision and is free of poetic formalities; she often uses daily spoken language.</string>
+    <string name="please">Please Select a Subject to Review the Laureates</string>
+</resources>
