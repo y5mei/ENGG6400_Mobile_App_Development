@@ -97,4 +97,12 @@ To add an Up button, you need to declare which activity is the logical parent in
      </TableLayout>
   ```
   
+## What I have Learned from Assignment-2 Fragment
+### How to use Fragment:
+```xml
+  <frag
+        android:name = "the name of the Java Class" [must to have]
+        android:layout = "the name of the fragment_layout" [optional]
+   />
+```
   
