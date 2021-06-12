@@ -106,7 +106,7 @@ To add an Up button, you need to declare which activity is the logical parent in
    />
 ```
 ### How to use linear layout to seperate a screen by two, regardless of the length of the screen:
-  ```
+  ```xml
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
