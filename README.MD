@@ -105,4 +105,30 @@ To add an Up button, you need to declare which activity is the logical parent in
         android:layout = "the name of the fragment_layout" [optional]
    />
 ```
+### How to use linear layout to seperate a screen by two, regardless of the length of the screen:
+  ```
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        app:srcCompat="@drawable/popular_machine"
+        />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/purple_200"
+            app:srcCompat="@drawable/popular_machine"
+            />
+    </LinearLayout>
+  ```
+
   
