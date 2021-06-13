@@ -22,13 +22,13 @@ android:scaleType="centerCrop"
 There are 3 steps to listen to a spinner:
 
 0) You need to get access to the spinner inside of your onCreate method:
-```xml
+```Java
 countrySpiner = findViewById(R.id.dynamic_spinner);
 ```
 
 1) You need to parepare a list of content, List<T>, for the spinner to display:
   
-```xml
+```Java
         List<CountryList.Country> counterList = new ArrayList<>();
         CountryList myCountryList = new CountryList();
 
@@ -47,14 +47,14 @@ countrySpiner = findViewById(R.id.dynamic_spinner);
  
 2) You need to construct a adapter, ArrayAdapter<T>, from your List<T>, then use setAdapter method to assign this adapter to your spinner object:
   
-  ```xml
+  ```Java
    ArrayAdapter<CountryList.Country> adapter = new ArrayAdapter<CountryList.Country>(this,R.layout.support_simple_spinner_dropdown_item,counterList);
    countrySpiner.setAdapter(adapter);
   ```
   
  3) Setup a listener to get which item is selected:
   
-  ```xml
+  ```Java
   countrySpiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -133,8 +133,8 @@ To add an Up button, you need to declare which activity is the logical parent in
   ### How to make Toast Message:
   
  ```Java
-    Toast.makeText(this, "No Button clicked", Toast.LENGTH_SHORT).show(); [This is for Activity]
-   Toast.makeText(getActivity(), "No Button clicked", Toast.LENGTH_SHORT).show(); [This is for fragment]
+  Toast.makeText(this, "No Button clicked", Toast.LENGTH_SHORT).show(); //This is for Activity
+  Toast.makeText(getActivity(), "No Button clicked", Toast.LENGTH_SHORT).show(); //This is for fragment
   ```
 
   
