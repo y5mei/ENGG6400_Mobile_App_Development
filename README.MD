@@ -130,5 +130,11 @@ To add an Up button, you need to declare which activity is the logical parent in
             />
     </LinearLayout>
   ```
+  ### How to make Toast Message:
+  
+ ```Java
+    Toast.makeText(this, "No Button clicked", Toast.LENGTH_SHORT).show(); [This is for Activity]
+   Toast.makeText(getActivity(), "No Button clicked", Toast.LENGTH_SHORT).show(); [This is for fragment]
+  ```
 
   
