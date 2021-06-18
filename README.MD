@@ -11,6 +11,13 @@ Proposal|June 7th
 Interim |June 15th
 Final PPT |June 24th
 
+## General Setup
+### How to setup a website on a Synology NAS without public ip address:
+1) get a domain name, then get a free DDNS service, so that the domain name always represent the public ip address of the NAS
+2) Install the DDNS updator2 on the NAS
+3) Active Port forwarding on the Router to port exteral port 80 to internal port 80 on the NAS
+4) If you still have question, you can watch this youtube video: https://www.youtube.com/watch?v=NxDcI2X4kL0&t=301s  
+
 ## What I have Learned from Assignment-1
 ### How to make a picture full fill a layout:
 ```xml
