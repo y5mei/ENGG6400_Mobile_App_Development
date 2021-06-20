@@ -28,6 +28,35 @@ repositories {
 ```
 2) Connect to Firebase from Tool -> Firebase assistance
 
+### How to setup and use a Global Variable?
+
+https://stackoverflow.com/questions/1944656/android-global-variable
+
+``` java
+public class MyApplication extends Application {
+
+    private String someVariable;
+
+    public String getSomeVariable() {
+        return someVariable;
+    }
+
+    public void setSomeVariable(String someVariable) {
+        this.someVariable = someVariable;
+    }
+}
+```
+In your android manifest you must declare the class implementing android.app.Application (add the android:name=".MyApplication" attribute to the existing application tag).
+
+Then in your activities you can get and set the variable like so:
+``` java
+// set
+((MyApplication) this.getApplication()).setSomeVariable("foo");
+
+// get
+String s = ((MyApplication) this.getApplication()).getSomeVariable();
+```
+
 ## What I have Learned from Assignment-1
 ### How to make a picture full fill a layout:
 ```xml
