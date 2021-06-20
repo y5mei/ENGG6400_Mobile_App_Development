@@ -18,6 +18,16 @@ Final PPT |June 24th
 3) Active Port forwarding on the Router to port exteral port 80 to internal port 80 on the NAS
 4) If you still have question, you can watch this youtube video: https://www.youtube.com/watch?v=NxDcI2X4kL0&t=301s  
 
+### How to setup Firebase database in Android Studio?
+
+1) delete the following code from build.gradle (Project) file
+``` xml
+repositories {
+        jcenter()
+}
+```
+2) Connect to Firebase from Tool -> Firebase assistance
+
 ## What I have Learned from Assignment-1
 ### How to make a picture full fill a layout:
 ```xml
